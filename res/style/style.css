@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+div.headerCountainer {
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    margin-bottom: 10vh;
+}
+img.icon {
+    display: block;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+div.bodyCountainer {
+    position: absolute;
+    width: 100%;
+    height: 84vh;
+    top: 11vh;
+    overflow: auto;
+}
