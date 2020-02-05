@@ -21,3 +21,6 @@ div.bodyCountainer {
     top: 11vh;
     overflow: auto;
 }
+p.title {
+    font-size: 2vh;
+}
