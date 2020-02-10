@@ -2,18 +2,21 @@ body {
     margin: 0;
     font-family: sans-serif;
 }
+
 div.headerCountainer {
     position: fixed;
     width: 100%;
     height: 10vh;
     margin-bottom: 10vh;
 }
+
 img.icon {
     display: block;
     height: 100%;
     margin-left: auto;
     margin-right: auto;
 }
+
 div.bodyCountainer {
     position: absolute;
     width: 100%;
@@ -21,6 +24,39 @@ div.bodyCountainer {
     top: 11vh;
     overflow: auto;
 }
+
+div.featureCountainer {
+    position: absolute;
+    right: 2vw;
+    left: 2vw;
+    /* background-color: #ffd800; */
+}
+
 p.title {
-    font-size: 2vh;
+    animation: ease fadeAnim 2s;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 200%;
+    text-align: center;
+    color: #444444;
+}
+
+p.featureTitle {
+    font-family: sans-serif;
+    font-size: 150%;
+    margin-left: 5vw;
+    color: #444444;
+}
+p.description {
+    font-family: sans-serif;
+    font-size: 100%;
+    margin-left: 5vw;
+}
+
+@keyframes fadeAnim{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
 }
