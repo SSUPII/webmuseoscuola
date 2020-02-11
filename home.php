@@ -11,7 +11,10 @@
             <a href="./index.htm"><img class=icon src="./res/icon.png" alt="Web Musei"></a>
         </div>
         <div class=bodyCountainer>
-            
+            <p class=title>Choose a city. You will see every museum and artist from that city!</p>
+			<div class=content>
+				
+			</div>
         </div>
     </body>
 </html>

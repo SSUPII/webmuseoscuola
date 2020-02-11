@@ -10,6 +10,15 @@ div.headerCountainer {
     margin-bottom: 10vh;
 }
 
+div.content {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    height: 60vh;
+    overflow: auto;
+    border: solid 1px #C0C0C0;
+}
+
 img.icon {
     display: block;
     height: 100%;
@@ -32,6 +41,15 @@ div.featureCountainer {
     /* background-color: #ffd800; */
 }
 
+div.buttonCountainer {
+    position: fixed;
+    right: 2vw;
+    left: 2vw;
+    text-align: center;
+    animation: ease moveFromBottomAnim 3s;
+    bottom: 15vh;
+}
+
 p.title {
     animation: ease fadeAnim 2s;
     font-family: 'Times New Roman', Times, serif;
@@ -46,11 +64,23 @@ p.featureTitle {
     margin-left: 5vw;
     color: #444444;
 }
+
 p.description {
     font-family: sans-serif;
     font-size: 100%;
     margin-left: 5vw;
 }
+
+#startButton {
+    width: 12vw;
+    height: 8vw;
+    background-color: #00FF00;
+    color: #FFFFFF;
+    font-size: 5vw;
+    font-weight: bold;
+    border-radius: 2vw
+}
+
 
 @keyframes fadeAnim{
     0%{
@@ -58,5 +88,16 @@ p.description {
     }
     100%{
         opacity: 100;
+    }
+}
+
+@keyframes moveFromBottomAnim{
+    0% {
+        opacity: 0;
+        bottom: 5vh;
+    }
+    100% {
+        opacity: 100;
+        bottom: 15vh;
     }
 }
