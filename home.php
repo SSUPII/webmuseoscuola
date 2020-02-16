@@ -35,7 +35,7 @@
 			      }
 			    }
 			    else {
-					echo "<p>An error has occurred</p>".mysqli_connect_error();
+					echo "<div style='text-align: center'><img src='./res/img/error.png' class=thumb /><p style='align: center'>An error has occurred</p>".mysqli_connect_error()."</div>";
 			    }
 			  ?>
 			</div>
