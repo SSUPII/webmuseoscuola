@@ -10,15 +10,6 @@ div.headerCountainer {
     margin-bottom: 10vh;
 }
 
-div.content {
-    position: absolute;
-    left: 10%;
-    right: 10%;
-    height: 60vh;
-    overflow: auto;
-    border: solid 1px #C0C0C0;
-}
-
 img.icon {
     display: block;
     height: 100%;

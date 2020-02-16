@@ -1,3 +1,12 @@
+div.list {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    height: 60vh;
+    overflow: auto;
+    border: solid 1px #C0C0C0;
+}
+
 div.content{
   position: relative;
   border-bottom: 1px solid #F0F0F0;
