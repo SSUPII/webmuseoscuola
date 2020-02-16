@@ -20,12 +20,17 @@
 			  <?php
 			    $connection = mysqli_connect("127.0.0.1","guest","","musei");
 			    if($connection != FALSE){
-			      $sql = "SELECT nome FROM citta ORDER BY nome";
+			      $sql = "SELECT nome, immagine FROM citta ORDER BY nome";
 			      $result = mysqli_query($connection,$sql);
-			      if($result != FALSE || mysqli_num_rows() > 0){
+			      if($result != FALSE || mysqli_num_rows($result) > 0){
 			        while($data = mysqli_fetch_assoc($result)){
 					  $string = str_replace(" ","_",$data["nome"]);
-			          echo "<a href=./city.php?d=$string><div class=content style='border-bottom: 1px solid #F0F0F0; font-size: 3.5vh;'>$data[nome]</div></a>";
+					  if($data["immagine"] == NULL)
+						$img = "./res/img/missing.png";
+					  else
+					    $img = $data["immagine"];
+
+			          echo "<a href=./city.php?d=$string><div class=content style='border-bottom: 1px solid #F0F0F0; font-size: 3.5vh;'><img src=$img class=thumb />$data[nome]</div></a>";
 			        }
 			      }
 			    }

@@ -23,3 +23,7 @@ div.content{
   position: relative;
   
 }
+
+img.thumb{
+    height: 100px;
+}
