@@ -1,3 +1,15 @@
+div.listHolder{
+    position: absolute;
+    width: 50%;
+}
+
+div.listTitle {
+    position: sticky;
+    text-align: center;
+    border-bottom: 2px solid #C0C0C0;
+    font-size: 3vh;
+}
+
 div.list {
     position: absolute;
     left: 10%;
@@ -9,5 +21,5 @@ div.list {
 
 div.content{
   position: relative;
-  border-bottom: 1px solid #F0F0F0;
+  
 }

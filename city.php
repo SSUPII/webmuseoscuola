@@ -15,7 +15,17 @@
             <a href="./index.htm"><img class=icon src="./res/icon.png" alt="Web Musei"></a>
         </div>
         <div class=bodyCountainer>
-            
+            <p class=title>Awesome! Now choose a museum or artist from that city.</p>
+            <div class=listHolder>
+                <div class=list>
+                    <div class="content listTitle">Museums</div>
+                </div>
+            </div>
+            <div class=listHolder style="left: 50%;">
+                <div class=list>
+                    <div class="content listTitle">Artists</div>
+                </div>
+            </div>
         </div>
     </body>
 </html>

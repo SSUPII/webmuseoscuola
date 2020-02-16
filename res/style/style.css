@@ -44,7 +44,7 @@ div.buttonCountainer {
 p.title {
     animation: ease fadeAnim 2s;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 200%;
+    font-size: 5vh;
     text-align: center;
     color: #444444;
 }

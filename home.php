@@ -15,7 +15,7 @@
             <a href="./index.htm"><img class=icon src="./res/icon.png" alt="Web Musei"></a>
         </div>
         <div class=bodyCountainer>
-            <p class=title>Choose a city. You will see every museum and artist from that city! à</p>
+            <p class=title>Choose a city. You will see every museum and artist from that city!</p>
 			<div class=list>
 			  <?php
 			    $connection = mysqli_connect("127.0.0.1","guest","","musei");
@@ -25,7 +25,7 @@
 			      if($result != FALSE || mysqli_num_rows() > 0){
 			        while($data = mysqli_fetch_assoc($result)){
 					  $string = str_replace(" ","_",$data["nome"]);
-			          echo "<div class=content><a href=./city.php?d=$string>$data[nome]</a></div>";
+			          echo "<a href=./city.php?d=$string><div class=content style='border-bottom: 1px solid #F0F0F0; font-size: 3.5vh;'>$data[nome]</div></a>";
 			        }
 			      }
 			    }
