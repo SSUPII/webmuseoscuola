@@ -21,7 +21,7 @@
                     <?php
 			        $connection = mysqli_connect("127.0.0.1","guest","","musei");
 			        if($connection != FALSE){
-						$sql = "SELECT musei.immagine, musei.descrizione FROM musei WHERE musei.nome = \"".str_replace("_"," ",$_GET["d"])."\"";
+						$sql = "SELECT artisti.immagine, artisti.descrizione FROM artisti WHERE artisti.nome = \"".str_replace("_"," ",$_GET["d"])."\"";
 						$result = mysqli_query($connection,$sql);
 						if($result != FALSE){
 							if(mysqli_num_rows($result) > 0){
@@ -30,7 +30,7 @@
 										$img = "./res/img/missing.png";
 									else
 										$img = $data["immagine"];
-									if($data["descrizione"] == "") $string = "It appers that we don't have a description for this museum";
+									if($data["descrizione"] == "") $string = "It appers that we don't have a description for this artist";
 									else $string = $data["descrizione"];
 									echo "<img src=$img class=full /><p>$string</p>";
 								}
@@ -54,7 +54,7 @@
                     <div class="content listTitle">Works</div>
 					<?php
 			        if($connection != FALSE){
-						$sql = "SELECT opere.titolo, opere.tipo, opere.immagine FROM opere, musei WHERE musei.codMuseo = opere.codMuseo AND musei.nome = \"".str_replace("_"," ",$_GET["d"])."\" ORDER BY opere.titolo";
+						$sql = "SELECT opere.titolo, opere.tipo, opere.immagine FROM opere, artisti WHERE artisti.codArtista = opere.codArtista AND artisti.nome = \"".str_replace("_"," ",$_GET["d"])."\" ORDER BY opere.titolo";
 						$result = mysqli_query($connection,$sql);
 						if($result != FALSE){
 							if(mysqli_num_rows($result) > 0){

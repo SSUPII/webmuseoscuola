@@ -10,6 +10,14 @@ div.listTitle {
     font-size: 3vh;
 }
 
+div.description {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    height: 60vh;
+    overflow: auto;
+}
+
 div.list {
     position: absolute;
     left: 10%;
@@ -33,5 +41,5 @@ img.thumb{
 img.full {
     height: 300px;
     float: left;
-    margin: 5px;
+    margin: 10px;
 }
