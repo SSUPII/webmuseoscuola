@@ -29,3 +29,9 @@ img.thumb{
     float: left;
     margin: 15px;
 }
+
+img.full {
+    height: 300px;
+    float: left;
+    margin: 5px;
+}
