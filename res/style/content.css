@@ -26,4 +26,6 @@ div.content{
 
 img.thumb{
     height: 100px;
+    float: left;
+    margin: 15px;
 }
