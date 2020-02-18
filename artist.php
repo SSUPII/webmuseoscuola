@@ -21,7 +21,7 @@
                     <?php
 			        $connection = mysqli_connect("127.0.0.1","guest","","musei");
 			        if($connection != FALSE){
-						$sql = "SELECT artisti.immagine, artisti.descrizione FROM artisti WHERE artisti.nome = \"".str_replace("_"," ",$_GET["d"])."\"";
+						$sql = "SELECT artisti.immagine, artisti.descrizione, artisti.dataN, artisti.dataM FROM artisti WHERE artisti.nome = \"".str_replace("_"," ",$_GET["d"])."\"";
 						$result = mysqli_query($connection,$sql);
 						if($result != FALSE){
 							if(mysqli_num_rows($result) > 0){
@@ -30,8 +30,12 @@
 										$img = "./res/img/missing.png";
 									else
 										$img = $data["immagine"];
-									if($data["descrizione"] == "") $string = "It appers that we don't have a description for this artist";
-									else $string = $data["descrizione"];
+									
+									$string = "($data[dataN]";
+									if($data["dataM"] != NULL) $string .= " - $data[dataM])<br>";
+									else $string .= ")";
+									if($data["descrizione"] == "") $string .= "It appers that we don't have a description for this artist";
+									else $string .= $data["descrizione"];
 									echo "<img src=$img class=full /><p>$string</p>";
 								}
 							}
