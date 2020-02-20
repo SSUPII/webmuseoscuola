@@ -21,17 +21,17 @@
                     $sql = "SELECT titolo, tipo, immagine, descrizione FROM opere WHERE opere.titolo = \"".str_replace("_"," ",$_GET["d"])."\"";
                     $result = mysqli_query($connection,$sql);
                     if($result != FALSE){
-							if(mysqli_num_rows($result) > 0){
-								while($data = mysqli_fetch_assoc($result)){
-                                    echo "<p class=title>".str_replace("_"," ",$_GET["d"])." ($data[tipo])</p>";
-									$string = str_replace(" ","_",$data["titolo"]);
-									if($data["immagine"] == NULL)
-										$img = "./res/img/missing.png";
-									else
-										$img = $data["immagine"];
-                                    if($data["descrizione"] == "" || $data["descrizione"] == NULL) $string = "It appers that we don't have a description for this work...";
-									else $string = $data["descrizione"];
-									echo "<a href='$img'><img src=$img class=fullArt /></a><p>$string</p>";
+						if(mysqli_num_rows($result) > 0){
+							while($data = mysqli_fetch_assoc($result)){
+                                echo "<p class=title>".str_replace("_"," ",$_GET["d"])." ($data[tipo])</p>";
+								$string = str_replace(" ","_",$data["titolo"]);
+								if($data["immagine"] == NULL)
+									$img = "./res/img/missing.png";
+								else
+									$img = $data["immagine"];
+                                if($data["descrizione"] == "" || $data["descrizione"] == NULL) $string = "It appers that we don't have a description for this work...";
+								else $string = $data["descrizione"];
+                                echo "<a href='$img'><img src=$img class=fullArt /></a><p>$string</p>";
 								}
 							}
 							else {

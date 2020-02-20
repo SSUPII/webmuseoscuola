@@ -20,7 +20,7 @@
 			    <?php
 			        $connection = mysqli_connect("127.0.0.1","guest","","musei");
 			        if($connection != FALSE){
-						$sql = "SELECT nome, immagine FROM citta ORDER BY nome";
+						$sql = "SELECT nome, immagine, nazione FROM citta ORDER BY nome";
 						$result = mysqli_query($connection,$sql);
 						if($result != FALSE){
 							if(mysqli_num_rows($result) > 0){
@@ -30,7 +30,7 @@
 										$img = "./res/img/missing.png";
 									else
 										$img = $data["immagine"];
-									echo "<a href=./city.php?d=$string><div class=content><img src=$img class=thumb />$data[nome]</div></a>";
+									echo "<a href=./city.php?d=$string><div class=content><img src=$img class=thumb />$data[nome] ($data[nazione])</div></a>";
 								}
 							}
 							else {

@@ -21,7 +21,7 @@
                     <?php
 			        $connection = mysqli_connect("127.0.0.1","guest","","musei");
 			        if($connection != FALSE){
-						$sql = "SELECT musei.immagine, musei.descrizione FROM musei WHERE musei.nome = \"".str_replace("_"," ",$_GET["d"])."\"";
+						$sql = "SELECT musei.immagine, musei.descrizione, indirizzo FROM musei WHERE musei.nome = \"".str_replace("_"," ",$_GET["d"])."\"";
 						$result = mysqli_query($connection,$sql);
 						if($result != FALSE){
 							if(mysqli_num_rows($result) > 0){
@@ -31,7 +31,7 @@
 									else
 										$img = $data["immagine"];
 									if($data["descrizione"] == "" || $data["descrizione"] == NULL) $string = "It appers that we don't have a description for this museum";
-									else $string = $data["descrizione"];
+									else $string = "(".$data["indirizzo"].")<br>".$data["descrizione"];
 									echo "<img src=$img class=full /><p>$string</p>";
 								}
 							}
