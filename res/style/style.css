@@ -26,19 +26,19 @@ div.bodyCountainer {
 }
 
 div.featureCountainer {
-    position: absolute;
+    display: inline-block;
+    width: 100%;
     right: 2vw;
     left: 2vw;
-    /* background-color: #ffd800; */
 }
 
 div.buttonCountainer {
-    position: fixed;
-    right: 2vw;
-    left: 2vw;
+    display: inline-block;
+    position: relative;
     text-align: center;
     animation: ease moveFromBottomAnim 3s;
-    bottom: 15vh;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 p.title {
@@ -69,7 +69,11 @@ p.description {
     color: #FFFFFF;
     font-size: 5vw;
     font-weight: bold;
-    border-radius: 2vw
+    border-radius: 2vw;
+    border: 0;
+    box-shadow: 5px 5px 10px gray;
+    -webkit-box-shadow: 5px 5px 10px gray;
+    -moz-box-shadow: 5px 5px 10px gray;
 }
 
 
@@ -85,10 +89,10 @@ p.description {
 @keyframes moveFromBottomAnim{
     0% {
         opacity: 0;
-        bottom: 5vh;
+        bottom: -15vh;
     }
     100% {
         opacity: 100;
-        bottom: 15vh;
+        bottom: 0vh;
     }
 }
