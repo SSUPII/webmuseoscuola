@@ -4,7 +4,7 @@ div.listHolder{
 }
 
 div.listTitle {
-    position: sticky;
+    position: relative;
     text-align: center;
     border-bottom: 2px solid #C0C0C0;
     font-size: 3vh;
@@ -27,19 +27,29 @@ div.list {
     border: solid 1px #C0C0C0;
 }
 
-div.content{
-  position: relative;
-  
+div.content {
+    display: inline-block;
+    position: relative;
+    border-bottom: 1px solid #F0F0F0;
+    font-size: 3.5vh;
+    width: 100%;
 }
 
 img.thumb{
-    height: 100px;
+    width: 6vw;
     float: left;
     margin: 15px;
 }
 
 img.full {
-    height: 300px;
+    width: 18vw;
     float: left;
     margin: 10px;
+}
+
+img.fullArt {
+    display: inline-block;
+    width: 46%;
+    float: left;
+    margin: 2%;
 }

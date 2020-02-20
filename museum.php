@@ -30,7 +30,7 @@
 										$img = "./res/img/missing.png";
 									else
 										$img = $data["immagine"];
-									if($data["descrizione"] == "") $string = "It appers that we don't have a description for this museum";
+									if($data["descrizione"] == "" || $data["descrizione"] == NULL) $string = "It appers that we don't have a description for this museum";
 									else $string = $data["descrizione"];
 									echo "<img src=$img class=full /><p>$string</p>";
 								}
@@ -51,7 +51,7 @@
             </div>
             <div class=listHolder style="left: 50%;">
                 <div class=list>
-                    <div class="content listTitle">Works</div>
+                    <div class="listTitle">Works</div>
 					<?php
 			        if($connection != FALSE){
 						$sql = "SELECT opere.titolo, opere.tipo, opere.immagine FROM opere, musei WHERE musei.codMuseo = opere.codMuseo AND musei.nome = \"".str_replace("_"," ",$_GET["d"])."\" ORDER BY opere.titolo";
@@ -59,12 +59,12 @@
 						if($result != FALSE){
 							if(mysqli_num_rows($result) > 0){
 								while($data = mysqli_fetch_assoc($result)){
-									$string = str_replace(" ","_",$data["nome"]);
+									$string = str_replace(" ","_",$data["titolo"]);
 									if($data["immagine"] == NULL)
 										$img = "./res/img/missing.png";
 									else
 										$img = $data["immagine"];
-									echo "<a href=./artist.php?d=$string><div class=content style='border-bottom: 1px solid #F0F0F0; font-size: 3.5vh; height: 130px;'><img src=$img class=thumb />$data[nome]</div></a>";
+									echo "<a href=./art.php?d=$string><div class=content><img src=$img class=thumb />$data[titolo]</div></a>";
 								}
 							}
 							else {

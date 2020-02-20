@@ -18,7 +18,7 @@
             <p class=title>Awesome! Now choose a museum or artist from that city.</p>
             <div class=listHolder>
                 <div class=list>
-                    <div class="content listTitle">Museums</div>
+                    <div class="listTitle">Museums</div>
                     <?php
 			        $connection = mysqli_connect("127.0.0.1","guest","","musei");
 			        if($connection != FALSE){
@@ -32,7 +32,7 @@
 										$img = "./res/img/missing.png";
 									else
 										$img = $data["immagine"];
-									echo "<a href=./museum.php?d=$string><div class=content style='border-bottom: 1px solid #F0F0F0; font-size: 3.5vh; height: 130px;'><img src=$img class=thumb />$data[nome]</div></a>";
+									echo "<a href=./museum.php?d=$string><div class=content><img src=$img class=thumb />$data[nome]</div></a>";
 								}
 							}
 							else {
@@ -51,7 +51,7 @@
             </div>
             <div class=listHolder style="left: 50%;">
                 <div class=list>
-                    <div class="content listTitle">Artists</div>
+                    <div class="listTitle">Artists</div>
 					<?php
 			        if($connection != FALSE){
 						$sql = "SELECT artisti.nome, artisti.immagine FROM artisti, citta WHERE citta.codCitta = artisti.codCitta AND citta.nome = \"".str_replace("_"," ",$_GET["d"])."\" ORDER BY artisti.nome";
@@ -64,7 +64,7 @@
 										$img = "./res/img/missing.png";
 									else
 										$img = $data["immagine"];
-									echo "<a href=./artist.php?d=$string><div class=content style='border-bottom: 1px solid #F0F0F0; font-size: 3.5vh; height: 130px;'><img src=$img class=thumb />$data[nome]</div></a>";
+									echo "<a href=./artist.php?d=$string><div class=content><img src=$img class=thumb />$data[nome]</div></a>";
 								}
 							}
 							else {
