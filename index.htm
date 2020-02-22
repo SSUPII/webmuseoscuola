@@ -1,27 +1,49 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
-        <link rel="icon" href="./favicon.ico" />
-        <meta charset=utf-8 />
-        <link rel="stylesheet" href="./res/style/style.css" type="text/css" />
         <title>Web Musei</title>
+        <style>
+            .flagCountainer {
+                margin: 0;
+                position: absolute;
+                width: 100%;
+                top: 50%;
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+            }
+            img {
+                animation: sizeChangeOut .5s forwards;
+            }
+            img:hover {
+                animation: sizeChangeIn .5s forwards;
+            }
+
+            @keyframes sizeChangeIn{
+                0% {
+                }
+                100% {
+                    transform: scale(1.1);
+                }
+            }
+            @keyframes sizeChangeOut {
+                0% {
+                    transform: scale(1.1);
+                }
+                100% {
+                    transform: scale(1);
+                }
+            }
+        </style>
     </head>
-    <body>
-        <div class=headerCountainer>
-            <a href="./index.htm"><img class=icon src="./res/icon.png" alt="Web Musei"></a>
+    <body style="margin: 0;">
+        <div style="position: fixed; width: 48%; height: 100%;">
+            <div class="flagCountainer">
+                <a href="./start.php?lang=it"><img style="float: right; vertical-align: central" src="./res/img/flags/italian.png" /></a>
+            </div>
         </div>
-        <div class=bodyCountainer>
-            <p class="title">Welcome to <span style="font-size: 150%">Web Musei</span></p>
-            <div class="featureCountainer" style="animation: ease fadeAnim 4s;">
-                <p class="featureTitle">Visit you dream museums like never before</p>
-                <p class="description">A place to visit your favourite museums with little trouble.</p>
-            </div>
-            <div class="featureCountainer" style="animation: ease fadeAnim 4s;">
-                <p class="featureTitle">Changelog:</p>
-                <p class="description">Release 1.0.0 - Release</p>
-            </div>
-            <div class="buttonCountainer">
-                <input id="startButton" type="button" value="Go!" onclick="location.href = './home.php';" />
+        <div style="position: fixed; width: 48%; left: 54%; height: 100%;">
+            <div class="flagCountainer">
+                <a href="./start.php?lang=en"><img style="float: left; vertical-align: central" src="./res/img/flags/english.png" /></a>
             </div>
         </div>
     </body>
