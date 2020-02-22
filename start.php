@@ -41,8 +41,9 @@
         <title>Web Musei</title>
     </head>
     <body>
+		<a href="./index.htm"><img style="float: left;" src="./res/img/back.png" /></a><img style="float: left;" src="./res/img/lang.png" /><a href="./start.php?lang=it">Italiano</a> <a href="./start.php?lang=en">English</a>
         <div class=headerCountainer>
-            <a href="./home.php?lang=<?php echo $strings[0]; ?>"><img class=icon src="./res/icon.png" alt="Web Musei"></a>
+            <a href="./start.php?lang=<?php echo $strings[0]; ?>"><img class=icon src="./res/icon.png" alt="Web Musei" title="Home"></a>
         </div>
         <div class=bodyCountainer>
             <p class="title"><?php echo $strings[1]; ?><span style="font-size: 150%"><?php echo $strings[2]; ?></span></p>
