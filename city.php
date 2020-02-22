@@ -102,7 +102,7 @@
 										$img = "./res/img/missing.png";
 									else
 										$img = $data["immagine"];
-									echo "<a href=./artist.php?d=$string><div class=content><img src=$img class=thumb />$data[nome]</div></a>";
+									echo "<a href=./artist.php?d=$string&lang=$strings[0]><div class=content><img src=$img class=thumb />$data[nome]</div></a>";
 								}
 							}
 							else {
