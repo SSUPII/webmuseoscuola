@@ -97,3 +97,9 @@ p.description {
         bottom: 0vh;
     }
 }
+
+@media screen and (max-width: 800px) {
+    img.icon {
+        display: none;
+    }
+}
