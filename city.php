@@ -87,7 +87,7 @@
 			    ?>
                 </div>
             </div>
-            <div class=listHolder style="left: 50%;">
+            <div class=listHolder style="float: right;">
                 <div class=list>
                     <div class="listTitle">Artists</div>
 					<?php

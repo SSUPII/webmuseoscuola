@@ -8,6 +8,7 @@ div.headerCountainer {
     width: 100%;
     height: 10vh;
     margin-bottom: 10vh;
+    background-color: #FFFFFF;
 }
 
 img.icon {
@@ -21,7 +22,7 @@ div.bodyCountainer {
     position: absolute;
     width: 100%;
     height: 84vh;
-    top: 11vh;
+    top: 15vh;
     overflow: auto;
 }
 

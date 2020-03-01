@@ -50,7 +50,7 @@
         </div>
         <div class=bodyCountainer>
             <p class=title><?php echo $strings[1]; ?></p>
-			<div class=list>
+			<div class=list style="height: 60vh;">
 			    <?php
 			        $connection = mysqli_connect("127.0.0.1","guest","","musei");
 			        if($connection != FALSE){

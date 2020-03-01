@@ -1,5 +1,5 @@
 div.listHolder{
-    position: absolute;
+    position: relative;
     width: 50%;
 }
 
@@ -52,4 +52,23 @@ img.fullArt {
     width: 46%;
     float: left;
     margin: 2%;
+}
+
+@media screen and (max-width: 800px) {
+    div.listHolder {
+        width: 100%;
+        padding-bottom: 5vh;
+    }
+
+    div.description {
+        position: relative;
+        height: unset;
+        width: 80%;
+    }
+
+    div.list {
+        position: relative;
+        height: 40vh;
+        width: 80%;
+    }
 }
