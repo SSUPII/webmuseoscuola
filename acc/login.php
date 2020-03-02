@@ -6,11 +6,13 @@
 			case "en":{
 				$strings[] = "en";
 				$strings[] = "Login";
+				$strings[] = "Register";
 				break;
 			}
 			case "it":{
 				$strings[] = "it";
 				$strings[] = "Accesso";
+				$strings[] = "Registra";
 				break;
 			}
 			default:{
@@ -44,10 +46,47 @@
 			<div class=listCountainer>
 				<div class=list style="border: none;">
 					<div style="text-align: center">
-						<form>
-							Username <input type=text><br>
-							Password <input type=password><br>
-							<input type=submit value="Login Placeholder"> <input type=button value="Register Placeholder">
+						<script type="text/javascript">
+							var submited;
+						</script>
+						<form name=log action="" method=POST onsubmit="checkps()">
+							Username <input type=text name=user required><br>
+							Password <input type=password name=pass required><br>
+							<input type=submit value=<?php echo "\"$strings[1]\""; ?>> <input type=submit onclick="submited='reg'" value=<?php echo "\"$strings[2]\""; ?>>
+							<script type="text/javascript">
+							var urlstr = window.location.href;
+							var url = new URL(urlstr);
+							var lang = url.searchParams.get("lang");
+							function checkps(){
+								if(submited == "reg"){
+									var ps = document.getElementsByName("pass")[0].value;
+									var string1 = "";
+									var string2 = "";
+									switch(lang){
+										case "en":{
+											string1 = "Please type your password again.";
+											break;
+										}
+										case "it":{
+											string1 = "Per favore inserisci la password di nuovo.";
+											break;
+										}
+									}
+
+									var psstring = "";
+									do{
+										psstring = prompt(string1);
+									}while(psstring != ps && psstring != null);
+									if(psstring == null){
+										document.log.action = urlstr;
+									}else{
+										document.log.action = "./registration.php?lang="+lang;
+									}
+								}else{
+									document.log.action = "./sessionstart.php?lang="+lang;
+								}
+							}
+							</script>
 						</form>
 					</div>
 				</div>
