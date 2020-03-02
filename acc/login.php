@@ -7,12 +7,16 @@
 				$strings[] = "en";
 				$strings[] = "Login";
 				$strings[] = "Register";
+				$strings[] = "This username is already taken";
+				$strings[] = "Registration completed";
 				break;
 			}
 			case "it":{
 				$strings[] = "it";
 				$strings[] = "Accesso";
 				$strings[] = "Registra";
+				$strings[] = "Questo username è stato già usato";
+				$strings[] = "Registrazione completata";
 				break;
 			}
 			default:{
@@ -37,7 +41,7 @@
         <title>Web Musei</title>
     </head>
     <body>
-		<a href="../index.htm"><img style="float: left;" src="../res/img/back.png" /></a><img style="float: left;" src="../res/img/lang.png" /><a href="../home.php?lang=it">Italiano</a> <a href="../home.php?lang=en">English</a>
+		<a href="../index.htm"><img style="float: left;" src="../res/img/back.png" /></a><img style="float: left;" src="../res/img/lang.png" /><a href="./login.php?lang=it">Italiano</a> <a href="./login.php?lang=en">English</a>
         <div class=headerCountainer>
             <a href="../home.php?lang=<?php echo $strings[0]; ?>"><img class=icon src="../res/icon.png" alt="Web Musei" title="Home"></a>
         </div>
@@ -47,8 +51,22 @@
 				<div class=list style="border: none;">
 					<div style="text-align: center">
 						<script type="text/javascript">
-							var submited;
+							var submited = "undefined";
 						</script>
+						<p style="color: #FF0000"><?php 
+						if(isset($_GET["err"])){
+							switch($_GET["err"]){
+								case "-1":{
+									echo $strings[4];
+									break;
+								}
+								case "1":{
+									echo $strings[3];
+									break;
+								}
+							}
+						}
+						?></p>
 						<form name=log action="" method=POST onsubmit="checkps()">
 							Username <input type=text name=user required><br>
 							Password <input type=password name=pass required><br>
@@ -85,6 +103,7 @@
 								}else{
 									document.log.action = "./sessionstart.php?lang="+lang;
 								}
+								submited = "undefined";
 							}
 							</script>
 						</form>
