@@ -14,7 +14,7 @@
 				$strings[] = "Awesome! Now choose a museum or artist from that city.";
 				$strings[] = "name";
 				$strings[] = "We couldn't find anything on our database...";
-				$strings[] = "What a shame!";
+				$strings[] = "We'll try our best to fix this!";
 				$strings[] = "Ops... Looks like we got an error!";
 				break;
 			}
@@ -23,7 +23,7 @@
 				$strings[] = "Fantastico! Ora scegli un museo o artista da quella città.";
 				$strings[] = "nome";
 				$strings[] = "Non abbiamo trovato nulla nel nostro database...";
-				$strings[] = "Che situazione imbarazzante!";
+				$strings[] = "Faremo del nostro meglio per risolvere ciò!";
 				$strings[] = "Ops... Si è verificato un errore!";
 				break;
 			}

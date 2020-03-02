@@ -54,7 +54,7 @@ img.fullArt {
     margin: 2%;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1080px) {
     div.listHolder {
         width: 100%;
         padding-bottom: 5vh;

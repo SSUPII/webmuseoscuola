@@ -17,7 +17,7 @@
 				$strings[] = "title";
 				$strings[] = "type";
 				$strings[] = "We couldn't find anything on our database...";
-				$strings[] = "What a shame!";
+				$strings[] = "We'll try our best to fix this!";
 				$strings[] = "Ops... Looks like we got an error!";
 				$strings[] = "It appers that we don't have a description for this artist";
 				break;
@@ -30,7 +30,7 @@
 				$strings[] = "titolo";
 				$strings[] = "tipo";
 				$strings[] = "Non abbiamo trovato nulla nel nostro database...";
-				$strings[] = "Che situazione imbarazzante!";
+				$strings[] = "Faremo del nostro meglio per risolvere ciò!";
 				$strings[] = "Ops... Si è verificato un errore!";
 				$strings[] = "Non abbiamo una descrizione per questo artista";
 				break;

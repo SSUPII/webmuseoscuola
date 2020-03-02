@@ -51,13 +51,6 @@
                 <p class="featureTitle"><?php echo $strings[3]; ?></p>
                 <p class="description"><?php echo $strings[4]; ?></p>
             </div>
-            <div class="featureCountainer" style="animation: ease fadeAnim 4s;">
-                <p class="featureTitle">Changelog (English):</p>
-                <p class=description>Beta 1.2:</p>
-                <ul style="list-style-type: none;">
-                    <li><p class=description>Website optimized for very small screens</p></li>
-                </ul>
-            </div>
             <div class="buttonCountainer">
                 <input id="startButton" type="button" value="<?php echo $strings[5]; ?>" onclick="location.href = './home.php?lang=<?php echo $strings[0]; ?>';" />
             </div>

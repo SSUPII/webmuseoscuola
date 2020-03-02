@@ -17,7 +17,7 @@
 				$strings[] = "description";
 				$strings[] = "It appers that we don't have a description for this work...";
 				$strings[] = "We couldn't find this work on our database...";
-				$strings[] = "This is no good!";
+				$strings[] = "We'll try our best to fix this!";
 				$strings[] = "Ops... Looks like we got an error!";
 				break;
 			}
@@ -29,7 +29,7 @@
 				$strings[] = "descrizione";
 				$strings[] = "Non abbiamo una descrizione per questa opera...";
 				$strings[] = "Non siamo riusciti a trovare questa opera nel nostro database...";
-				$strings[] = "Questo è male!";
+				$strings[] = "Faremo del nostro meglio per risolvere ciò!";
 				$strings[] = "Ops... Si è verificato un errore!";
 				break;
 			}
