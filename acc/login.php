@@ -10,6 +10,7 @@
 				$strings[] = "This username is already taken";
 				$strings[] = "Registration completed";
 				$strings[] = "Account not found";
+				$strings[] = "Please login first";
 				break;
 			}
 			case "it":{
@@ -19,6 +20,7 @@
 				$strings[] = "Questo username è stato già usato";
 				$strings[] = "Registrazione completata";
 				$strings[] = "Account non trovato";
+				$strings[] = "Per favore accedi prima";
 				break;
 			}
 			default:{
@@ -68,6 +70,10 @@
 								}
 								case "2":{
 									echo $strings[5];
+									break;
+								}
+								case "3":{
+									echo $strings[6];
 									break;
 								}
 							}

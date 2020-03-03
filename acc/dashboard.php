@@ -23,6 +23,8 @@
 		header('Location: http://127.0.0.1/webmuseoscuola/index.htm');
 		exit();
 	}
+	session_start();
+	if(!isset($_SESSION["usri"])) header("Location: http://127.0.0.1/webmuseoscuola/acc/login.php?lang=$strings[0]&err=3");
 ?>
 <!DOCTYPE html>
 <html>
