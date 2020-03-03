@@ -9,6 +9,7 @@
 				$strings[] = "Register";
 				$strings[] = "This username is already taken";
 				$strings[] = "Registration completed";
+				$strings[] = "Account not found";
 				break;
 			}
 			case "it":{
@@ -17,6 +18,7 @@
 				$strings[] = "Registra";
 				$strings[] = "Questo username è stato già usato";
 				$strings[] = "Registrazione completata";
+				$strings[] = "Account non trovato";
 				break;
 			}
 			default:{
@@ -62,6 +64,10 @@
 								}
 								case "1":{
 									echo $strings[3];
+									break;
+								}
+								case "2":{
+									echo $strings[5];
 									break;
 								}
 							}
