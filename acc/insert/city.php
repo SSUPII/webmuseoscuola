@@ -62,51 +62,9 @@
 			<input type=hidden id=lang value="<?php echo $strings[0]; ?>">
 			<script type="text/javascript">
 				var lang = document.getElementById("lang");
-
-				function getChoice(element){
-					var choice;
-					switch(element.value){
-						case "0":{
-							choice = "city";
-							break;
-						}
-						case "1":{
-							choice = "museum";
-							break;
-						}
-						case "2":{
-							choice = "artist";
-							break;
-						}
-						case "3":{
-							choice = "work";
-							break;
-						}
-						default:{
-							choice = null;
-						}
-					}
-					return choice;
-				}
-
 				function insertChoiceHandler(){
-					var choiceElement = document.getElementById("insertChoice");
-					var choice = getChoice(choiceElement);
-					if(choice != null) window.location = "./insert/"+choice+".php?lang="+lang.value;
-				}
-
-				function deteleChoiceHandler(){
-					var choiceElement = document.getElementById("deleteChoice");
-					var choice = getChoice(choiceElement);
-					if(choice != null) window.location = "./delete/"+choice+".php?lang="+lang.value;
-				}
-				
-				function banChoiceHandler(){
-					window.location = "./moderation/bans.php";
-				}
-
-				function promoteChoiceHandler(){
-					window.location = "./moderation/promotions.php";
+					var choice = document.getElementById("insertChoice");
+					window.location = "./insert/city.php?lang="+lang.value;
 				}
 			</script>
 			<?php

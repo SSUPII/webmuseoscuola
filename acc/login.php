@@ -11,6 +11,7 @@
 				$strings[] = "Registration completed";
 				$strings[] = "Account not found";
 				$strings[] = "Please login first";
+				$strings[] = "An internal server error has occurred";
 				break;
 			}
 			case "it":{
@@ -21,6 +22,7 @@
 				$strings[] = "Registrazione completata";
 				$strings[] = "Account non trovato";
 				$strings[] = "Per favore accedi prima";
+				$strings[] = "Si è verificato un errore interno nel server";
 				break;
 			}
 			default:{

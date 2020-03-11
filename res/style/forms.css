@@ -2,3 +2,7 @@ input {
     border-radius: 2vw;
     padding: 10px;
 }
+div.choice {
+    margin-top: 15px;
+    text-align: center;
+}
