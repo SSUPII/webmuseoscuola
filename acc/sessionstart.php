@@ -35,13 +35,16 @@
 			if(isset($_POST["user"]) && isset($_POST["pass"])){
 				$connection = mysqli_connect("127.0.0.1","guest","","musei");
 				if($connection != FALSE){
-					$sql = "SELECT id FROM users WHERE username = \"$_POST[user]\"";
+					$sql = "SELECT id, hash FROM users WHERE username = \"$_POST[user]\"";
 					$result = mysqli_query($connection,$sql);
 					if($result != FALSE && mysqli_num_rows($result) > 0){
-						session_start();
-						$_SESSION["usri"] = mysqli_fetch_assoc($result)["id"];
-						echo $_SESSION["usri"];
-						header("Location: http://127.0.0.1/webmuseoscuola/acc/dashboard.php?lang=$strings[0]");
+						$data = mysqli_fetch_assoc($result);
+						if(sha1($_POST["pass"]) == $data["hash"]){
+							session_start();
+							$_SESSION["usri"] = $data["id"];
+							echo $_SESSION["usri"];
+							header("Location: http://127.0.0.1/webmuseoscuola/acc/dashboard.php?lang=$strings[0]");
+						}else header("Location: http://127.0.0.1/webmuseoscuola/acc/login.php?lang=$strings[0]&err=5");
 					}else header("Location: http://127.0.0.1/webmuseoscuola/acc/login.php?lang=$strings[0]&err=2");
 				}else {
 					header("Location: http://127.0.0.1/webmuseoscuola/acc/login.php?lang=$strings[0]");

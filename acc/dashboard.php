@@ -15,6 +15,9 @@
 				$strings[] = "Go";
 				$strings[] = "Ban or unban a user ";
 				$strings[] = "Promote/Demote a user to/from administrator ";
+				$strings[] = "You have been banned from contributing.";
+				$strings[] = "You are not allowed to do that";
+				$strings[] = "Success";
 				break;
 			}
 			case "it":{
@@ -29,6 +32,9 @@
 				$strings[] = "Vai";
 				$strings[] = "Bandisci o libera un utente ";
 				$strings[] = "Promuovi/Degrada un utente ad/da amministratore ";
+				$strings[] = "Sei stato bandito, non puoi più contribuire.";
+				$strings[] = "Non hai i permessi per farlo";
+				$strings[] = "Successo";
 				break;
 			}
 			default:{
@@ -58,7 +64,7 @@
             <a href="../start.php?lang=<?php echo $strings[0]; ?>"><img class=icon src="../res/icon.png" alt="Web Musei" title="Home"></a>
         </div>
 		<div class=bodyCountainer>
-			<div style="text-align: center;"><a href="../start.php?lang=?<?php echo "$strings[0]"; ?>"><?php echo $strings[1]; ?></a></div>
+			<div style="text-align: center;"><a href="../start.php?lang=<?php echo $strings[0]; ?>"><?php echo $strings[1]; ?></a></div>
 			<input type=hidden id=lang value="<?php echo $strings[0]; ?>">
 			<script type="text/javascript">
 				var lang = document.getElementById("lang");
@@ -102,11 +108,11 @@
 				}
 				
 				function banChoiceHandler(){
-					window.location = "./moderation/bans.php";
+					window.location = "./moderation/bans.php?lang="+lang.value;
 				}
 
 				function promoteChoiceHandler(){
-					window.location = "./moderation/promotions.php";
+					window.location = "./moderation/promotions.php?lang="+lang.value;
 				}
 			</script>
 			<?php
@@ -151,6 +157,8 @@
 							for($i = 0; $i <= $userLevel; $i++){
 								echo $levels[$i];
 							}
+						}else{
+							echo "<div class=choice><p style='color: red; font-style: italic'>$strings[11]</p></div>";
 						}
 
 					}else{
@@ -158,6 +166,19 @@
 					}
 				}else{
 					header("Location: http://127.0.0.1/webmuseoscuola/acc/login.php?lang=$strings[0]&err=4");
+				}
+
+				if(isset($_GET["err"])){
+					switch($_GET["err"]){
+						case '0':{
+							echo "<div class=choice><p style='color: red; font-style: italic'>$strings[13]</p></div>";
+							break;
+						}
+						case '1':{
+							echo "<div class=choice><p style='color: red; font-style: italic'>$strings[12]</p></div>";
+							break;
+						}
+					}
 				}
 			?>
 			

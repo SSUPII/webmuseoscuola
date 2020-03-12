@@ -12,6 +12,7 @@
 				$strings[] = "Account not found";
 				$strings[] = "Please login first";
 				$strings[] = "An internal server error has occurred";
+				$strings[] = "Wrong credentials";
 				break;
 			}
 			case "it":{
@@ -23,6 +24,7 @@
 				$strings[] = "Account non trovato";
 				$strings[] = "Per favore accedi prima";
 				$strings[] = "Si è verificato un errore interno nel server";
+				$strings[] = "Credenziali errate";
 				break;
 			}
 			default:{
@@ -77,6 +79,9 @@
 								case "3":{
 									echo $strings[6];
 									break;
+								}
+								case "5":{
+									echo $strings[8];
 								}
 							}
 						}

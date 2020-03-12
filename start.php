@@ -10,6 +10,7 @@
                 $strings[] = "Visit you dream museums like never before";
                 $strings[] = "A place to visit your favourite museums with little to no trouble.";
                 $strings[] = "Go!";
+                $strings[] = "Login and contribute";
 				break;
 			}
 			case "it":{
@@ -19,6 +20,7 @@
                 $strings[] = "Visita i musei dei tuoi sogni come mai prima";
                 $strings[] = "Un posto dove visitare i tuoi musei preferiti senza alcun sforzo.";
                 $strings[] = "Vai!";
+                $strings[] = "Accedi e contribuisci";
 				break;
 			}
 			default:{
@@ -41,7 +43,7 @@
         <title>Web Musei</title>
     </head>
     <body>
-		<a href="./index.htm"><img style="float: left;" src="./res/img/back.png" /></a><img style="float: left;" src="./res/img/lang.png" /><a href="./start.php?lang=it">Italiano</a> <a href="./start.php?lang=en">English</a>
+		<a href="./index.htm"><img style="float: left;" src="./res/img/back.png" /></a><img style="float: left;" src="./res/img/lang.png" /><a href="./start.php?lang=it">Italiano</a> <a href="./start.php?lang=en">English</a> - <a href="./acc/login.php?lang=<?php echo $strings[0] ?>"><?php echo $strings[6] ?></a>
         <div class=headerCountainer>
             <a href="./start.php?lang=<?php echo $strings[0]; ?>"><img class=icon src="./res/icon.png" alt="Web Musei" title="Home"></a>
         </div>

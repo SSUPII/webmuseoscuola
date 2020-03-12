@@ -11,6 +11,7 @@
 				$strings[] = "We couldn't find anything on our database...";
 				$strings[] = "We'll try our best to fix this!";
 				$strings[] = "Ops... Looks like we got an error!";
+				$strings[] = "Login and contribute";
 				break;
 			}
 			case "it":{
@@ -21,6 +22,7 @@
 				$strings[] = "Non abbiamo trovato nulla nel nostro database...";
 				$strings[] = "Faremo del nostro meglio per risolvere ciò!";
 				$strings[] = "Ops... Si è verificato un errore!";
+				$strings[] = "Accedi e contribuisci";
 				break;
 			}
 			default:{
@@ -44,7 +46,7 @@
         <title>Web Musei</title>
     </head>
     <body>
-		<a href="./index.htm"><img style="float: left;" src="./res/img/back.png" /></a><img style="float: left;" src="./res/img/lang.png" /><a href="./home.php?lang=it">Italiano</a> <a href="./home.php?lang=en">English</a>
+		<a href="./index.htm"><img style="float: left;" src="./res/img/back.png" /></a><img style="float: left;" src="./res/img/lang.png" /><a href="./home.php?lang=it">Italiano</a> <a href="./home.php?lang=en">English</a> - <a href="./acc/login.php?lang=<?php echo $strings[0] ?>"><?php echo $strings[7] ?></a>
         <div class=headerCountainer>
             <a href="./home.php?lang=<?php echo $strings[0]; ?>"><img class=icon src="./res/icon.png" alt="Web Musei" title="Home"></a>
         </div>
